@@ -26,25 +26,44 @@ const DisplayAlbum = () => {
   // ===== DIFFERENT SONGS FOR DIFFERENT ALBUMS =====
 
   let songsData = []
-if (id == 0) {
-  songsData = allSongs
-}
 
-else if (id == 1) {
-  songsData = TopIsongs
-}
+  if (id == 0) {
+    songsData = allSongs
+  }
 
-else if (id == 2) {
-  songsData = Gsongs
-}
+  else if (id == 1) {
+    songsData = TopIsongs
+  }
 
-else if (id == 3) {
-  songsData = Ksongs
-}
+  else if (id == 2) {
+    songsData = Gsongs
+  }
 
-else if (id == 4) {
-  songsData = Dsongs
-}
+  else if (id == 3) {
+    songsData = Ksongs
+  }
+
+  else if (id == 4) {
+    songsData = Dsongs
+  }
+
+  // ===== TOTAL DURATION CALCULATION =====
+
+  const totalMinutes = songsData.reduce((total, song) => {
+
+    const parts = song.duration.split(':')
+
+    const minute = parseInt(parts[0])
+    const second = parseInt(parts[1])
+
+    return total + (minute * 60) + second
+
+  }, 0)
+
+  const hours = Math.floor(totalMinutes / 3600)
+
+  const minutes = Math.floor((totalMinutes % 3600) / 60)
+
   return (
 
     <div className="display-album">
@@ -94,7 +113,9 @@ else if (id == 4) {
 
             <span>•</span>
 
-            <span>about 2 hr 30 min</span>
+            <span>
+              about {hours} hr {minutes} min
+            </span>
 
           </div>
 
