@@ -101,7 +101,7 @@ const DisplayAlbum = () => {
               alt="spotify"
             />
 
-            <span>Spotify</span>
+            <span>Beatify</span>
 
             <span>•</span>
 
