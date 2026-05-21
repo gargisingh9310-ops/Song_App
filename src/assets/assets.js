@@ -133,15 +133,6 @@ export const assets = {
     clock_icon
 }
 
-export const allSongs = [
-
-    ...TopIsongs,
-    ...Gsongs,
-    ...Ksongs,
-    ...Dsongs
-
-]
-
 export const albumsData = [
 
     {
@@ -509,3 +500,11 @@ export const Dsongs = [
 ]
 
 
+export const allSongs = [
+
+    ...TopIsongs,
+    ...Gsongs,
+    ...Ksongs,
+    ...Dsongs
+
+]
