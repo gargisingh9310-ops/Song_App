@@ -1,82 +1,141 @@
-/* ===== DISPLAY ALBUM ===== */
+/* =====================================================
+   DISPLAY ALBUM PAGE
+===================================================== */
+
 .display-album{
   width: 100%;
-  min-height: 100vh;
-  color: white;
+  color: #ffffff;
   padding-bottom: 120px;
 }
 
-/* ===== HEADER ===== */
+/* =====================================================
+   ALBUM HEADER
+===================================================== */
+
 .album-header{
   display: flex;
   align-items: flex-end;
-  gap: 24px;
-  margin-top: 30px;
-  flex-wrap: wrap;
+  gap: 28px;
+
+  padding:
+    40px
+    25px;
+
+  min-height: 340px;
 }
 
-/* ===== COVER ===== */
+/* ================= COVER IMAGE ================= */
+
 .album-cover{
   width: 240px;
   height: 240px;
+
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.45);
+
+  transition: transform 0.35s ease;
 }
 
-/* ===== INFO ===== */
+.album-cover:hover{
+  transform: scale(1.03);
+}
+
+/* =====================================================
+   ALBUM INFO
+===================================================== */
+
 .album-info{
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  flex: 1;
 }
+
+/* ================= TYPE ================= */
 
 .album-type{
   font-size: 14px;
-  color: #d1d5db;
+  font-weight: 600;
+  color: #d5d5d5;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+/* ================= TITLE ================= */
+
 .album-title{
-  font-size: 52px;
+  font-size: 70px;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1;
+
+  margin: 0;
+
+  word-break: break-word;
 }
+
+/* ================= DESCRIPTION ================= */
 
 .album-desc{
   font-size: 15px;
-  color: #d1d5db;
-  max-width: 700px;
+  color: #c9c9c9;
   line-height: 1.6;
+
+  max-width: 800px;
 }
 
-/* ===== META ===== */
+/* =====================================================
+   META INFO
+===================================================== */
+
 .album-meta{
   display: flex;
   align-items: center;
-  gap: 10px;
   flex-wrap: wrap;
-  color: #d1d5db;
+
+  gap: 10px;
+
+  margin-top: 8px;
+
+  color: #ffffff;
   font-size: 14px;
 }
 
 .album-meta img{
   width: 24px;
-  height: 24px;
 }
 
-/* ===== SONG TABLE HEADER ===== */
-.song-table-header{
-  margin-top: 40px;
-  padding: 12px 0;
-  border-bottom: 1px solid #2a2a2a;
+/* =====================================================
+   SONG TABLE HEADER
+===================================================== */
 
+.song-table-header{
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr 1fr;
-  gap: 20px;
+  grid-template-columns:
+    4fr
+    2fr
+    2fr
+    1fr;
+
+  align-items: center;
+
+  padding:
+    12px
+    25px;
+
+  margin-top: 20px;
 
   color: #b3b3b3;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.12);
+
   font-size: 14px;
 }
 
@@ -84,62 +143,148 @@
   width: 18px;
 }
 
-/* ===== SONG ROW ===== */
+/* =====================================================
+   SONG ROW
+===================================================== */
+
 .song-row{
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr 1fr;
-  gap: 20px;
+  grid-template-columns:
+    4fr
+    2fr
+    2fr
+    1fr;
 
   align-items: center;
 
-  padding: 12px 10px;
-  border-radius: 8px;
+  gap: 10px;
 
-  transition: 0.3s ease;
+  padding:
+    12px
+    25px;
+
+  border-radius: 10px;
+
   cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
 }
 
 .song-row:hover{
   background: rgba(255,255,255,0.08);
+  transform: scale(0.995);
 }
 
-/* ===== SONG INFO ===== */
+/* =====================================================
+   SONG INFO
+===================================================== */
+
 .song-info{
   display: flex;
   align-items: center;
+
   gap: 14px;
-  min-width: 0;
+
+  overflow: hidden;
 }
 
 .song-number{
-  width: 20px;
   color: #b3b3b3;
+  width: 18px;
   text-align: center;
 }
 
 .song-info img{
   width: 50px;
   height: 50px;
+
   object-fit: cover;
-  border-radius: 6px;
+
+  border-radius: 8px;
 }
 
 .song-name{
   font-size: 15px;
   font-weight: 500;
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+/* =====================================================
+   OTHER COLUMNS
+===================================================== */
+
 .song-album,
 .song-date,
 .song-duration{
+  color: #c7c7c7;
   font-size: 14px;
-  color: #b3b3b3;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =====================================================
+   EXTRA LARGE SCREENS
+===================================================== */
+
+@media (min-width: 1600px){
+
+  .album-title{
+    font-size: 90px;
+  }
+
+  .album-cover{
+    width: 280px;
+    height: 280px;
+  }
+
+}
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1200px){
+
+  .album-title{
+    font-size: 58px;
+  }
+
+  .album-cover{
+    width: 220px;
+    height: 220px;
+  }
+
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 992px){
+
+  .album-header{
+    gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .album-title{
+    font-size: 46px;
+  }
+
+  .album-cover{
+    width: 190px;
+    height: 190px;
+  }
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
 @media (max-width: 768px){
 
   .album-header{
@@ -148,34 +293,79 @@
     text-align: center;
   }
 
+  .album-info{
+    align-items: center;
+  }
+
+  .album-title{
+    font-size: 40px;
+  }
+
   .album-cover{
     width: 200px;
     height: 200px;
   }
 
-  .album-title{
-    font-size: 34px;
-  }
-
-  .album-desc{
-    font-size: 14px;
-  }
-
-  .album-meta{
-    justify-content: center;
-  }
-
   .song-table-header{
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns:
+      4fr
+      2fr
+      1fr;
+
+    font-size: 13px;
   }
 
-  .song-table-header p:nth-child(2),
-  .song-table-header p:nth-child(3){
+  .song-date{
     display: none;
   }
 
   .song-row{
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns:
+      4fr
+      2fr
+      1fr;
+  }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px){
+
+  .album-header{
+    padding: 24px 14px;
+  }
+
+  .album-cover{
+    width: 180px;
+    height: 180px;
+  }
+
+  .album-title{
+    font-size: 32px;
+  }
+
+  .album-desc{
+    font-size: 13px;
+  }
+
+  .album-meta{
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .song-table-header{
+    display: none;
+  }
+
+  .song-row{
+    grid-template-columns: 1fr auto;
+
+    padding:
+      12px
+      14px;
   }
 
   .song-album,
@@ -184,11 +374,87 @@
   }
 
   .song-info img{
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
   }
 
   .song-name{
     font-size: 14px;
   }
+
+  .song-duration{
+    font-size: 13px;
+  }
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px){
+
+  .album-title{
+    font-size: 26px;
+  }
+
+  .album-cover{
+    width: 150px;
+    height: 150px;
+  }
+
+  .album-desc{
+    font-size: 12px;
+  }
+
+  .song-row{
+    padding:
+      10px
+      10px;
+  }
+
+  .song-info{
+    gap: 10px;
+  }
+
+  .song-info img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .song-name{
+    max-width: 140px;
+  }
+
+}
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 340px){
+
+  .album-title{
+    font-size: 22px;
+  }
+
+  .album-cover{
+    width: 130px;
+    height: 130px;
+  }
+
+  .song-info img{
+    width: 35px;
+    height: 35px;
+  }
+
+  .song-name{
+    font-size: 12px;
+    max-width: 100px;
+  }
+
+  .song-duration{
+    font-size: 11px;
+  }
+
 }

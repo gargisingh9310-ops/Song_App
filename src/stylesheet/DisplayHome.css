@@ -1,79 +1,252 @@
-/* ===== DISPLAY HOME ===== */
+/* =====================================================
+   DISPLAY HOME PAGE
+===================================================== */
+
 .display-home-container{
   width: 100%;
-  height: calc(100vh - 90px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  color: white;
+  min-height: 100vh;
+
   padding-bottom: 120px;
+
+  color: #ffffff;
 }
 
-/* ===== PAGE SCROLLBAR ===== */
-.display-home-container::-webkit-scrollbar{
-  width: 6px;
-}
+/* =====================================================
+   MUSIC SECTION
+===================================================== */
 
-.display-home-container::-webkit-scrollbar-thumb{
-  background: #555;
-  border-radius: 10px;
-}
-
-.display-home-container::-webkit-scrollbar-track{
-  background: transparent;
-}
-
-/* ===== SECTION ===== */
 .music-section{
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 35px;
+  padding: 0 22px;
 }
 
-/* ===== TITLE ===== */
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
 .section-title{
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 18px;
-  color: white;
+  font-size: 32px;
+  font-weight: 800;
+
+  margin-bottom: 22px;
+
+  letter-spacing: -0.5px;
+
+  color: #ffffff;
+
+  position: relative;
+
+  display: inline-block;
 }
 
-/* ===== MUSIC LIST ===== */
+/* UNDERLINE EFFECT */
+
+.section-title::after{
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 60%;
+  height: 4px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #1db954,
+    transparent
+  );
+}
+
+/* =====================================================
+   MUSIC LIST
+===================================================== */
+
 .music-list{
   display: flex;
-  flex-wrap: nowrap;
-  gap: 18px;
+  gap: 22px;
 
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
 
-  width: 100%;
-  max-width: 100%;
-
-  padding-bottom: 14px;
   scroll-behavior: smooth;
+
+  padding:
+    10px
+    4px
+    15px;
+
+  scrollbar-width: none;
 }
 
-/* ===== HORIZONTAL SCROLL ===== */
+/* HIDE SCROLLBAR */
+
 .music-list::-webkit-scrollbar{
-  height: 6px;
+  display: none;
 }
 
-.music-list::-webkit-scrollbar-thumb{
-  background: #555;
-  border-radius: 10px;
+/* =====================================================
+   SMOOTH ANIMATION
+===================================================== */
+
+.music-section{
+  animation: fadeUp 0.6s ease;
 }
 
-.music-list::-webkit-scrollbar-track{
-  background: transparent;
+@keyframes fadeUp{
+
+  from{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px){
+/* =====================================================
+   EXTRA LARGE SCREEN
+===================================================== */
+
+@media (min-width: 1600px){
+
+  .music-section{
+    padding: 0 40px;
+  }
 
   .section-title{
-    font-size: 22px;
+    font-size: 42px;
+  }
+
+  .music-list{
+    gap: 28px;
+  }
+
+}
+
+/* =====================================================
+   LARGE LAPTOP
+===================================================== */
+
+@media (max-width: 1200px){
+
+  .section-title{
+    font-size: 30px;
+  }
+
+}
+
+/* =====================================================
+   LAPTOP
+===================================================== */
+
+@media (max-width: 992px){
+
+  .music-section{
+    padding: 0 18px;
+  }
+
+  .section-title{
+    font-size: 28px;
+  }
+
+  .music-list{
+    gap: 18px;
+  }
+
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px){
+
+  .music-section{
+    margin-top: 28px;
+    padding: 0 14px;
+  }
+
+  .section-title{
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .section-title::after{
+    height: 3px;
+  }
+
+  .music-list{
+    gap: 16px;
+  }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px){
+
+  .music-section{
+    margin-top: 24px;
+    padding: 0 10px;
+  }
+
+  .section-title{
+    font-size: 21px;
+    margin-bottom: 15px;
   }
 
   .music-list{
     gap: 14px;
+    padding-bottom: 10px;
   }
+
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px){
+
+  .section-title{
+    font-size: 18px;
+  }
+
+  .music-list{
+    gap: 12px;
+  }
+
+}
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 340px){
+
+  .music-section{
+    padding: 0 8px;
+  }
+
+  .section-title{
+    font-size: 16px;
+  }
+
+  .section-title::after{
+    height: 2px;
+  }
+
+  .music-list{
+    gap: 10px;
+  }
+
 }
