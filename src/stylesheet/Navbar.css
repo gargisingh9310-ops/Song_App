@@ -1,0 +1,210 @@
+/* ===== NAVBAR ===== */
+.navbar{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* ===== LEFT ===== */
+.navbar-left{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+/* ===== ICON ===== */
+.nav-icon{
+  width: 34px;
+  height: 34px;
+
+  padding: 8px;
+  border-radius: 50%;
+
+  background: rgba(0,0,0,0.7);
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nav-icon:hover{
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.05);
+}
+
+/* ===== RIGHT ===== */
+.navbar-right{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.navbar-right::-webkit-scrollbar{
+  height: 4px;
+}
+
+.navbar-right::-webkit-scrollbar-thumb{
+  background: #555;
+  border-radius: 10px;
+}
+
+.navbar-right::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+/* ===== BUTTONS ===== */
+.premium-btn,
+.install-btn,
+.profile-btn{
+  flex-shrink: 0;
+}
+
+/* PREMIUM */
+.premium-btn{
+  background: white;
+  color: black;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.premium-btn:hover{
+  transform: scale(1.04);
+}
+
+/* INSTALL */
+.install-btn{
+  background: black;
+  color: white;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.install-btn:hover{
+  background: #1f1f1f;
+}
+
+/* PROFILE */
+.profile-btn{
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: #a855f7;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.profile-btn:hover{
+  transform: scale(1.05);
+}
+
+/* ===== MENU ===== */
+.navbar-menu{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-bottom: 6px;
+}
+
+.navbar-menu::-webkit-scrollbar{
+  height: 4px;
+}
+
+.navbar-menu::-webkit-scrollbar-thumb{
+  background: #555;
+  border-radius: 10px;
+}
+
+.navbar-menu::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+/* ===== MENU BUTTON ===== */
+.menu-btn{
+  background: #242424;
+  color: white;
+
+  padding: 8px 16px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.menu-btn:hover{
+  background: #333;
+}
+
+.menu-btn.active{
+  background: white;
+  color: black;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+
+  .premium-btn{
+    display: none;
+  }
+
+  .install-btn{
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+
+  .profile-btn{
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .menu-btn{
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}

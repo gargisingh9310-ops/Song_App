@@ -1,0 +1,79 @@
+/* ===== DISPLAY HOME ===== */
+.display-home-container{
+  width: 100%;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: white;
+  padding-bottom: 120px;
+}
+
+/* ===== PAGE SCROLLBAR ===== */
+.display-home-container::-webkit-scrollbar{
+  width: 6px;
+}
+
+.display-home-container::-webkit-scrollbar-thumb{
+  background: #555;
+  border-radius: 10px;
+}
+
+.display-home-container::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+/* ===== SECTION ===== */
+.music-section{
+  margin-top: 30px;
+  width: 100%;
+}
+
+/* ===== TITLE ===== */
+.section-title{
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: white;
+}
+
+/* ===== MUSIC LIST ===== */
+.music-list{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  width: 100%;
+  max-width: 100%;
+
+  padding-bottom: 14px;
+  scroll-behavior: smooth;
+}
+
+/* ===== HORIZONTAL SCROLL ===== */
+.music-list::-webkit-scrollbar{
+  height: 6px;
+}
+
+.music-list::-webkit-scrollbar-thumb{
+  background: #555;
+  border-radius: 10px;
+}
+
+.music-list::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+
+  .section-title{
+    font-size: 22px;
+  }
+
+  .music-list{
+    gap: 14px;
+  }
+}

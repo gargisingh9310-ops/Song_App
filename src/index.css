@@ -1,0 +1,77 @@
+/* ===== GOOGLE FONT (OPTIONAL) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET ===== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ROOT VARIABLES ===== */
+:root{
+  --bg-color: #121212;
+  --card-color: #1e1e1e;
+  --text-color: #ffffff;
+  --secondary-text: #b3b3b3;
+  --primary-color: #1db954;
+  --hover-color: #1ed760;
+}
+
+/* ===== BODY ===== */
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  overflow-x: auto;
+}
+
+/* ===== LINKS ===== */
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== BUTTON ===== */
+button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ===== INPUT ===== */
+input{
+  outline: none;
+  border: none;
+  font-family: inherit;
+}
+
+/* ===== IMAGE ===== */
+img{
+  width: 100%;
+  display: block;
+}
+
+/* ===== LIST ===== */
+ul{
+  list-style: none;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+

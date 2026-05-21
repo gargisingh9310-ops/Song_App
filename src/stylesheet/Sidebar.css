@@ -1,0 +1,164 @@
+/* ===== SIDEBAR ===== */
+.sidebar-container{
+  height: 100%;
+  padding: 8px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== TOP ===== */
+.sidebar-top{
+  background: #121212;
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===== SIDEBAR LINK ===== */
+.sidebar-link{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sidebar-link:hover{
+  color: #d1d5db;
+}
+
+.sidebar-link p{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== ICON ===== */
+.sidebar-icon{
+  width: 24px;
+}
+
+/* ===== LIBRARY ===== */
+.sidebar-library{
+  background: #121212;
+  border-radius: 14px;
+  padding: 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ===== SCROLLBAR ===== */
+.sidebar-library::-webkit-scrollbar{
+  width: 6px;
+}
+
+.sidebar-library::-webkit-scrollbar-thumb{
+  background: #555;
+  border-radius: 10px;
+}
+
+.sidebar-library::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+/* ===== LIBRARY HEADER ===== */
+.library-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.library-title{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.library-title p{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.library-icons{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.library-small-icon{
+  width: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.library-small-icon:hover{
+  transform: scale(1.1);
+}
+
+/* ===== BOX ===== */
+.sidebar-box{
+  background: #242424;
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 20px;
+}
+
+.sidebar-box h1{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sidebar-box p{
+  font-size: 14px;
+  color: #d1d5db;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.sidebar-box button{
+  background: white;
+  color: black;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+  transition: 0.3s ease;
+}
+
+.sidebar-box button:hover{
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px){
+
+  .sidebar-link p,
+  .library-title p{
+    font-size: 14px;
+  }
+
+  .sidebar-icon{
+    width: 20px;
+  }
+
+  .library-small-icon{
+    width: 18px;
+  }
+
+  .sidebar-box h1{
+    font-size: 14px;
+  }
+
+  .sidebar-box p{
+    font-size: 12px;
+  }
+
+  .sidebar-box button{
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}

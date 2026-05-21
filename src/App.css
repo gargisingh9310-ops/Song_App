@@ -1,0 +1,88 @@
+/* ===== APP ===== */
+.app{
+  width: 100%;
+  height: 100vh;
+
+  background: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* ===== MAIN SECTION ===== */
+.main-section{
+  flex: 1;
+
+  display: flex;
+
+  overflow: hidden;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ===== DESKTOP SIDEBAR ===== */
+.desktop-sidebar{
+  width: 25%;
+  min-width: 260px;
+  display: block;
+}
+
+/* ===== TABLET SIDEBAR ===== */
+.tablet-sidebar{
+  width: 35%;
+  min-width: 220px;
+  display: none;
+}
+
+/* ===== DISPLAY ===== */
+.display-section{
+  flex: 1;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+/* ===== PLAYER ===== */
+.player-section{
+  width: 100%;
+  height: 90px;
+
+  border-top: 1px solid #222;
+  background: black;
+
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px){
+
+  .desktop-sidebar{
+    display: none;
+  }
+
+  .tablet-sidebar{
+    display: block;
+  }
+}
+
+@media (max-width: 768px){
+
+  .tablet-sidebar{
+    display: none;
+  }
+
+  .display-section{
+    width: 100%;
+  }
+
+  .player-section{
+    height: 80px;
+  }
+}
