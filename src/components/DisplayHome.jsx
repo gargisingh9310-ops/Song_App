@@ -3,7 +3,8 @@ import Navbar from './Navbar'
 
 import {
   albumsData,
-  TopIsongs
+  TopIsongs,
+  Dsongs
 } from '../assets/assets'
 
 import AlbumItem from './AlbumItem'
@@ -59,6 +60,34 @@ const DisplayHome = () => {
 
           {
             TopIsongs.map((item, index) => (
+
+              <SongItem
+                key={index}
+                name={item.name}
+                desc={item.desc}
+                id={item.id}
+                image={item.image}
+              />
+
+            ))
+          }
+
+        </div>
+
+      </div>
+
+      {/* ===== DILJIT SONGS SECTION ===== */}
+
+      <div className="music-section">
+
+        <h1 className="section-title">
+          Punjabi Vibes & Mood Hits
+        </h1>
+
+        <div className="music-list">
+
+          {
+            Dsongs.map((item, index) => (
 
               <SongItem
                 key={index}
